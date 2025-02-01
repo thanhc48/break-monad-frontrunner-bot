@@ -64,10 +64,10 @@ func main() {
 }
 
 func runBot(executor *bind.TransactOpts, frontrunnerContract *frontrunner.Frontrunner, ethClient *ethclient.Client) {
-	timer := time.NewTimer(taskInterval)
-	defer timer.Stop()
+	ticker := time.NewTicker(taskInterval)
+	defer ticker.Stop()
 
-	for range timer.C {
+	for range ticker.C {
 		feeCap, tipCap, err := getGasPrice(ethClient)
 		if err != nil {
 			log.Error("failed to get gas price", "error", err)
@@ -94,8 +94,6 @@ func runBot(executor *bind.TransactOpts, frontrunnerContract *frontrunner.Frontr
 		}
 
 		log.Info("confirmed frontrun", "reverted", receipt.Status == types.ReceiptStatusFailed)
-
-		timer.Reset(taskInterval)
 	}
 }
 
