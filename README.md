@@ -1,6 +1,7 @@
-# Break Monad Frontrunner Bot
+# FastLane Frontrunner Bot
 
-A bot designed to interact with Break Monad smart contracts.
+The objective is simple, you compete as a searcher to be first to land a transaction on-chain in each new block.
+Your ranking is determined by your win/loss ratio weighted by number of attempts.
 
 ## Prerequisites
 
