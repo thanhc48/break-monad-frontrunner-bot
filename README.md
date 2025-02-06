@@ -1,5 +1,9 @@
 # FastLane Frontrunner Bot
 
+<p align="center">
+  <img src="frontrunner-gif.gif" alt="Frontrunner Game Animation" width="600">
+</p>
+
 The objective is simple, you compete as a searcher to be first to land a transaction on-chain in each new block.
 Your ranking is determined by your win/loss ratio weighted by number of attempts.
 
